@@ -1,0 +1,77 @@
+---
+title: Tutorials
+tutorials:
+  - title: 'Getting started with PixiJS'
+    author: Kittykatattack
+    added_date: April 20 2013
+    external_url: 'https://github.com/kittykatattack/learningPixi'
+  - title: 'Building a parallax scroller with PixiJS: Part 1'
+    author: Christopher Caleb
+    added_date: October 20 2013
+    external_url: 'http://www.yeahbutisitflash.com/?p=5226'
+  - title: 'Building a parallax scroller with PixiJS: Part 2'
+    author: Christopher Caleb
+    added_date: November 10 2013
+    external_url: 'http://www.yeahbutisitflash.com/?p=5666'
+  - title: 'Building a parallax scroller with PixiJS: Part 3'
+    author: Christopher Caleb
+    added_on: December 11 2013
+    external_url: 'http://www.yeahbutisitflash.com/?p=6496'
+  - title: 'Building a parallax scroller with PixiJS: Part 4'
+    author: Christopher Caleb
+    added_on: January 26 2014
+    external_url: 'http://www.yeahbutisitflash.com/?p=7046'
+  - title: 'proclive.io Pixi tutorials'
+    author: Igor Neuhold
+    added_on: January 23 2017
+    external_url: 'http://proclive.io/tag/pixi/'
+  - title: 'Diving In: PixiJS – YouTube tutorial series'
+    author: CJ Gammon
+    added_on: January 8 2019
+    external_url: 'https://www.youtube.com/playlist?list=PL08jItIqOb2oGcyrgREbrm_b9OW7TE1ji'
+books:
+  - title: 'Learn Pixi.js: Create Great Interactive Graphics for Games and the Web'
+    author: 'Rex van der Spuy'
+    published_date: 2015-01-23T10:20:00Z
+    external_url: https://www.amazon.co.uk/Learn-Pixi-js-Interactive-Graphics/dp/1484210956
+---
+
+			<section class="tutorials">
+				<div class="inner">
+					<h2 data-delay="0" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">Tutorials</h2>
+
+					<div class="row">
+						<div class="col-8 ani-sfb" data-delay="0.1" data-speed="0.5" data-animation="short-from-bottom">
+							<div class="list">
+								<h4>Community Tutorials</h4>
+								<ul>
+                                    {% for tutorial in page.tutorials %}
+									<li>
+										<a href="{{ tutorial.external_url }}" target="_blank">
+                                            <p class="mono num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}/</p>
+											<div class="details">
+												<h6 class="mono">{{ tutorial.title }}</h6>
+												<p class="mono author">_by {{ tutorial.author }}</p>
+												<p class="date small-text">Added {{ tutorial.added_on }}</p>
+											</div>
+										</a>
+									</li>
+                                    {% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div class="col-4 ani-sfb" data-delay="0.2" data-speed="0.5" data-animation="short-from-bottom">
+							<div class="books">
+                                {% for book in page.books %}
+								<a href="{{ book.url }}" target="_blank" class="book-{{ forloop.index }}">
+									<h4>Book</h4>
+									<h6 class="mono">{{ book.title }}</h6>
+									<p class="mono author">_by {{ book.author }}</p>
+									<p class="date small-text">Published {{ book.published_date | date: "%F %Y" }}</p>
+								</a>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>

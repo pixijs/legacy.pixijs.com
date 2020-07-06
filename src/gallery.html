@@ -1,0 +1,21 @@
+---
+title: Gallery
+---
+
+<section class="gallery-submit">
+	<p class="big-text ani-sft" data-delay="0" data-speed="0.5" data-animation="short-from-top">Do you have a PixiJS project you would like featured in our gallery?</p>
+	<button class="button transparent ani-sfb show-submission" data-speed="0.5" data-animation="short-from-bottom">Submit</button>
+</section>
+
+<section class="projects">
+	<div class="inner no-max">
+		<h2 data-delay="0.3" data-speed="0.5" data-animation="short-from-bottom" class="underline ani-sfb">PixiJS Inspiration from Around the World</h2>
+	</div>
+	<div class="project-list margin-top-20">
+		{% assign delay = 0.3 %}
+		{% for entry in site.gallery_entries %}
+			{% include components/gallery-entry.html delay=delay entry=entry %}
+			{% assign delay = delay | plus: 0.2 %}
+		{% endfor %}
+	</div>
+</section>

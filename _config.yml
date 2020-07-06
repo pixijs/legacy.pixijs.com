@@ -1,0 +1,23 @@
+title: PixiJS
+
+source: src
+
+collections:
+  gallery_entries:
+    name: Gallery Entries
+    output: false
+
+permalink: pretty
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "location"
+    values:
+      layout: "location"

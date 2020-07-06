@@ -1,0 +1,230 @@
+---
+layout: home
+heading: The HTML5 Creation Engine
+subheading: Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.
+heading_image_path: /images/pixijs-v5-logo-1.png
+  
+brands_logos:
+  - alt_text: ubisoft
+    brand_image_path: /images/brand-logos/ubisoft.png
+  - alt_text: 20th_century_fox
+    brand_image_path: /images/brand-logos/20th_century_fox.png
+  - alt_text: adobe
+    brand_image_path: /images/brand-logos/adobe.png
+  - alt_text: barclays
+    brand_image_path: /images/brand-logos/barclays.png
+  - alt_text: bbc
+    brand_image_path: /images/brand-logos/bbc.png
+  - alt_text: bose
+    brand_image_path: /images/brand-logos/bose.png
+  - alt_text: cartoon_network
+    brand_image_path: /images/brand-logos/cartoon_network.png
+  - alt_text: disney
+    brand_image_path: /images/brand-logos/disney.png
+  - alt_text: google
+    brand_image_path: /images/brand-logos/google.png
+  - alt_text: hbo
+    brand_image_path: /images/brand-logos/hbo.png
+  - alt_text: hm
+    brand_image_path: /images/brand-logos/hm.png
+  - alt_text: lego
+    brand_image_path: /images/brand-logos/lego.png
+  - alt_text: lucasfilm
+    brand_image_path: /images/brand-logos/lucasfilm.png
+  - alt_text: marvel
+    brand_image_path: /images/brand-logos/marvel.png
+  - alt_text: mcdonalds
+    brand_image_path: /images/brand-logos/mcdonalds.png
+  - alt_text: orange
+    brand_image_path: /images/brand-logos/orange.png
+  - alt_text: pbs
+    brand_image_path: /images/brand-logos/pbs.png
+  - alt_text: rayban
+    brand_image_path: /images/brand-logos/rayban.png
+  - alt_text: redbull
+    brand_image_path: /images/brand-logos/redbull.png
+  - alt_text: spotify
+    brand_image_path: /images/brand-logos/spotify.png
+  - alt_text: steam
+    brand_image_path: /images/brand-logos/steam.png
+  - alt_text: tedx
+    brand_image_path: /images/brand-logos/tedx.png
+  - alt_text: toyota
+    brand_image_path: /images/brand-logos/toyota.png
+  - alt_text: volkswagen
+    brand_image_path: /images/brand-logos/volkswagen.png
+  - alt_text: youtube
+    brand_image_path: /images/brand-logos/youtube.png
+
+features: 
+  - title: Multi-platform Support
+    description: Interactive, visually compelling content on desktop, mobile and beyond, all reached with a single codebase to deliver transferable experiences.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-multiplatform.png'
+  - title: Tinting &amp; Blending Modes
+    description: Designers and clients will be thrilled by Photoshop quality blending and colour modes.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-tinting-blending.png'
+  - title: Sprite Sheet Support
+    description: Pixi caters for a range of sprite sheet formats and includes advanced support for features like trimming and rotational packing. 
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-sprite-sheet.png'
+  - title: Asset Loader
+    description: Sprite-sheets, graphics, fonts, animation data (soon to have Adobe Animate support). All your incoming assets can be loaded and handled by PixiJS.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-asset-loader.png'
+  - title: Easy API
+    description: Designed to be intuitive and easy to pick up. Developers old and new will find themselves right at home with its simple yet powerful API.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-api.png'
+  - title: WebGL Filters
+    description: Use and create your own spectacular WebGL filters and shaders to give your projects next-level visual fidelity and performance.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-filters.png'
+  - title: Advanced Text Rendering
+    description: Beautiful anti-aliased text at native and retina resolutions means that Pixi copy is as easy on the eye as it is on any other delivery method.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-type.png'
+  - title: Full Scene Graph
+    description: Organise your objects in hierarchical trees, with parent-child relationships.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-scenegraph.png'
+  - title: Renderer Auto-Detect
+    description: Certain, older platforms may not be able to use WebGL. Not a problem with Pixi as Canvas fallback is seamless and automated.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-canvas.png'
+  - title: Deploy into Apps
+    description: Use technologies such as Cordova to rapidly deploy your Pixi project as an App. Superb for both concepting and full delivery.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-apps.png'
+  - title: Accessibility
+    description: Pixi is an inclusive technology and all content can be made to be screen reader accessible with ease. The only WebGL renderer out there that does.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-accessibility.png'
+  - title: Multi Touch Interactivity
+    description: True multi-touch input and tracking means that you can create interactions such as pinch-to-scale that give audiences native feeling experiences.
+    image_path: 'https://www.pixijs.com/wp/wp-content/uploads/feature-multitouch.png'
+---
+
+<section class="brand-logos">
+	<p class="big-text">A mature solution for hundreds of global brands</p>
+	<div class="inner">
+		<div class="mask">
+			{% for logo in page.brands_logos %}
+				<div style="background-image:url({{ logo.brand_image_path }})" class="logo"></div>
+			{% endfor %}
+		</div>
+	</div>
+</section>
+
+<section class="features">
+	<div class="row">
+		<div class="col">
+			<span class="num">01</span>
+			<h3 class="underline">Fast</h3>
+			<h6>PixiJS' strength is speed. When it comes to 2D rendering, PixiJS is the fastest there is.</h6>
+		</div>
+		<div class="col">
+			<span class="num">02</span>
+			<h3 class="underline">Flexible</h3>
+			<h6>Friendly, feature-rich API lets PixiJS take care of the fundamentals whilst you focus on producing incredible multiplatform experiences.</h6>
+		</div>
+		<div class="col">
+			<span class="num">03</span>
+			<h3 class="underline">Free</h3>
+			<h6>PixiJS is and always will be Open Source, with a large and supportive community pushing its growth and evolution.</h6>
+		</div>
+	</div>
+	<div class="devices">
+		<div class="device desktop" data-delay="0">
+			<img src="/images/devices/device-desktop.png" alt="Desktop" />
+			<canvas id="device-desktop-canvas"></canvas>
+		</div>
+		<div class="device ipad" data-delay="0.15">
+			<img src="/images/devices/device-ipad.png" alt="iPad" />
+			<canvas id="device-ipad-canvas"></canvas>
+		</div>
+		<div class="device iphone" data-delay="0.45">
+			<img src="/images/devices/device-iphone.png" alt="iPhone" />
+			<canvas id="device-iphone-canvas"></canvas>
+		</div>
+		<div class="device phone" data-delay="0.75">
+			<img src="/images/devices/device-phone.png" alt="Phone" />
+			<canvas id="device-phone-canvas"></canvas>
+		</div>
+		<div class="device laptop" data-delay="0.3">
+			<img src="/images/devices/device-laptop.png" alt="Laptop" />
+			<canvas id="device-laptop-canvas"></canvas>
+		</div>
+		<div class="device tablet" data-delay="0.6">
+			<img src="/images/devices/device-tablet.png" alt="Tablet" />
+			<canvas id="device-tablet-canvas"></canvas>
+		</div>
+	</div>
+	<div class="button-center calc">
+		<a href="#features-list" class="button outline" data-delay="0.9">All features</a>
+	</div>
+</section>
+
+<section class="info-block">
+	<img src="/images/dotjs-logo.png" alt="dotJS Logo" class="dotjs" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+	<span class="type_8" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Award Winner&nbsp;</span>
+	<span class="type_9" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> - Most Innovative Frontend JavaScript Project of 2014</span>
+</section>
+
+<section class="projects">
+	<div class="inner">
+		<h2 data-delay="0" data-speed="0.5" data-animation="short-from-bottom" class="underline ani-sfb">Created with PixiJS</h2>
+		<h5 data-delay="0.15" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">Thousands of award winning sites and experiences are being made with PixiJS by leading content authors around the world</h5>
+	</div>
+	<div class="project-list">
+		{% assign delay = 0.3 %}
+		{% for entry in site.gallery_entries limit: 4 %}
+			{% include components/gallery-entry.html delay=delay entry=entry %}
+			{% assign delay = delay | plus: 0.2 %}
+		{% endfor %}
+	</div>
+	<div class="button-container margin-top-5">
+		<a href="/gallery" class="button transparent">View all</a>
+	</div>
+</section>
+
+<section class="support">
+	<i class="bg-1"></i>
+	<i class="bg-2"></i>
+	<div class="inner">
+		<h3 data-delay="0" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">Support Us to Move the Web Forward</h3>
+		<div data-delay="0.15" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">
+			<h5>PixiJS will always be free and open source but with your support we can grow faster together.</h5>
+		</div>
+		
+		<a href="https://opencollective.com/pixijs" target="_blank" class="button white blue-text ani-sfb" data-delay="0.45" data-speed="0.5" data-animation="short-from-bottom">Make a DONATION</a>
+	</div>
+</section>
+
+<section class="features-list" id="features-list">
+	<h2 class="underline ani-sfb" data-delay="0" data-speed="0.5" data-animation="short-from-bottom">PixiJS Features</h2>
+	<div class="inner">
+		{% assign delay = 0 %}
+		{% assign midway = page.features | size | divided_by: 2 %}
+
+		<ul class="features-col left-col">
+			{% for feature in page.features %}
+				{% if forloop.index0 < midway %}
+					{% include components/feature.html delay=delay feature=feature %}
+					{% assign delay = delay | plus: 0.2 %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+		<ul class="features-col right-col">
+			{% for feature in page.features %}
+				{% if forloop.index0 >= midway %}
+					{% include components/feature.html delay=delay feature=feature %}
+					{% assign delay = delay | plus: 0.2 %}
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
+</section>
+
+<section class="get-started">
+	<div class="inner">
+		<h3 data-delay="0" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">Elevate your Traditional HTML5 Techniques</h3>
+		<div data-delay="0.15" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">
+			<h5>Unbeatable performance, intuitive API, globally used and battle­tested.</h5>
+		</div>
+	</div>
+	<div class="button-container">
+		<a href="https://github.com/GoodBoyDigital/pixi.js" target="_blank" class="button fixed ani-sfb" data-delay="0.3" data-speed="0.5" data-animation="short-from-bottom">Download</a>
+		<a href="tutorials" class="button fixed outline pink ani-sfb" data-delay="0.45" data-speed="0.5" data-animation="short-from-bottom">Get Started</a>
+	</div>
+</section>
