@@ -1,0 +1,64 @@
+---
+title: FAQ
+faq_sections:
+  - name: Getting Started
+    faq_questions:
+      - question: What is PixiJS for?
+        answer_html: >-
+          <p>Everything! Pixi.js is a rendering library that will allow you to create rich, 
+          interactive graphic experiences, cross-platform applications, and games without 
+          having to dive into the WebGL API or grapple with the intricacies of browser and 
+          device compatibility. Killer performance with a clean API, means not only will 
+          your content be better - but also faster to build!</p>
+      - question:  Is PixiJS free?
+        answer_html: >-
+          <p>PixiJS is and always will be free and Open Source. That said, financial contributions 
+          are what make it possible to push PixiJS further, faster. Contributions allow us to 
+          commission the PixiJS developer community to accelerate feature development and create
+           more in-depth documentation. <a href="https://opencollective.com/pixijs" target="_blank">Support Us</a> by making a contribution via <a href="https://opencollective.com/pixijs" target="_blank">Open Collective</a>. Go on! It will be a massive help AND make you feel good about yourself, win win ;)</p>
+      - question: Can have I have a quick play with PixiJS now?
+        answer_html: >-
+          <p>Sure! Head over to:  <a href="https://pixiplayground.com" target="_blank">PixiPlayground.com</a></p>
+      - question: Where do I get it?
+        answer_html: >-
+          <p>Visit our GitHub page to download the very latest version of PixiJS. This is the most up-to-date resource for PixiJS and should always be your first port of call to make sure you are using the latest version. Just click the 'Download' link in the navigation.</p>
+      - question: How do I get started?
+        answer_html: >-
+          <p>Right here! Take a look through the Resources section for a wealth of information including documentation, forums, tutorials and the Goodboy blog.</p>
+      - question: Why should I use PixiJS?
+        answer_html: >-
+          <p>Because you care about speed. PixiJS' #1 mantra has always been speed. We really do feel the need! We do everything we can to make PixiJS as streamlined, efficient and fast as possible, whilst balancing it with offering as many crucial and valuable features as we can.</p>
+      - question: Is PixiJS a game engine?
+        answer_html: >-
+          <p>No. PixiJS is what we've come to think of as a "creation engine". Whilst it is extremely good for making games, the core essence of PixiJS is simply moving things around on screens as quickly and efficiently as possible. It does of course happen that it is absolutely brilliant for making games though!</p>
+      - question: Who makes PixiJS?
+        answer_html: >-
+          <p>Outside of the highly active PixiJS community, it is primarily maintained by Mat Groves, Technical Partner of our creative agency Goodboy Digital. One of the huge advantages of creating PixiJS within the framework of a working agency is that it means its features are always driven by genuine industry demands and critically are always trialled "in anger" in our cutting-edge games, sites and apps.</p>
+      - question: I found a bug. What should I do?
+        answer_html: >-
+          <p>Two things - lets us know via the <a href="https://github.com/pixijs/pixi.js/issues/new">PixiJS GitHub community</a> and even better yet, if you know how, post a fix! Our Community is stronger in numbers so we're always keen to welcome new contributors into the team to help us shape what PixiJS becomes next.</p>
+---
+
+<section class="faqs">
+    <div class="inner">
+        <h2 data-delay="0" data-speed="0.5" data-animation="short-from-bottom" class="ani-sfb">FAQ</h2>
+
+        <div class="faq-list ani-sfb" data-delay="0.1" data-speed="0.5" data-animation="short-from-bottom">
+            {% for section in page.faq_sections %}
+                <h4>{{ section.name }}</h4>
+                <ul>
+                    {% for row in section.faq_questions %}
+                    <li>
+                        <p class="mono num">{{ forloop.index | prepend: '0' | slice: -2, 2 }}/</p>
+                        <h6>{{ row.question }}</h6>
+                        <div class="indicator">
+                            <i class="h"></i><i class="v"></i>
+                        </div>
+                        <div class="big-text">{{ row.answer_html | markdownify }}</div>
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</section>
