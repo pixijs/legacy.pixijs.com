@@ -244,7 +244,7 @@ a:hover {
 .homepage-header .welcome .pixijs-logo {
     width: 138px;
     height: 41.4px;
-    background: url(/images/pixijs-v5-logo.png);
+    background: url(/images/logo.svg);
     background-size: 138px 41.4px;
     display: block;
     margin: 0 auto
@@ -296,17 +296,19 @@ a:hover {
     left: 0;
     top: 0;
     z-index: 10;
-    width: 100%
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
 }
 
 .mobile-header .bar {
     display: block;
     height: 50px;
     background-color: #fff;
-    background-image: url(/images/pixijs-v5-logo-sml2x.png);
+    background-image: url(/images/logo.svg);
     background-position: 10px 12px;
     background-repeat: no-repeat;
-    background-size: 84px 28px;
+    background-size: 84px 24px;
     -webkit-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
     -moz-box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, .35);
@@ -443,8 +445,8 @@ a:hover {
 }
 
 .mobile-header nav a.alt-nav-item {
-    width: 50%;
-    display: inline-block;
+    // width: 50%;
+    // display: inline-block;
     vertical-align: top;
     padding-left: 40px;
     background-size: 24px 24px;
@@ -460,9 +462,10 @@ a:hover {
 }
 
 .mobile-header nav .mobile-sub-nav a {
-    width: 50%;
-    display: inline-block;
-    vertical-align: top
+    vertical-align: top;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
 }
 
 .mobile-header.open nav {

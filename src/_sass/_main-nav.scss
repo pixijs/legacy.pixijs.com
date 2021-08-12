@@ -13,10 +13,11 @@
         position: absolute;
         left: 29px;
         top: 16px;
-        width: 99px;
-        height: 33px;
-        background: url(/images/pixijs-v5-logo-sml2x.png);
-        background-size: 99px 33px;
+        width: 100px;
+        height: 32px;
+        background: url(/images/logo.svg) no-repeat;
+        background-size: contain;
+        background-position: top left;
         -webkit-transition: left .3s cubic-bezier(.215, .61, .355, 1);
         -moz-transition: left .3s cubic-bezier(.215, .61, .355, 1);
         -ms-transition: left .3s cubic-bezier(.215, .61, .355, 1);
