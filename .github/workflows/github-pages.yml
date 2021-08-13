@@ -21,4 +21,4 @@ jobs:
         with:
           token: ${{ secrets.WORKFLOW_TOKEN }}
           bundler_ver: '2.1.4'
-          cname: 'pixijs-dev.com'
+          cname: 'pixijs.com'
