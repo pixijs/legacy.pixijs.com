@@ -150,8 +150,6 @@ jQuery(document).ready(function($) {
 			bpc.scriptsToLoad.push('https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.min.js');
 		}
 		bpc.scriptsToLoad.push(bpc.root+'js/pixijs/pixi.min.js');
-		//bpc.scriptsToLoad.push(bpc.root+'js/animation-home.js');
-		//bpc.scriptsToLoad.push(bpc.root+'js/animation-device.js');
 	}
 	/*if (bpc.base === 'home' || bpc.base === 'gallery') {
 		bpc.scriptsToLoad.push(bpc.root+'js/ExifReader.js');
