@@ -1,7 +1,10 @@
-window.deviceAnimation = function(canvas, width, height) {
+window.deviceAnimation = function(canvasId) {
+	var view = document.getElementById(canvasId);
+	var width = view.offsetWidth;
+	var height = view.offsetHeight;
 	var renderer = PIXI.autoDetectRenderer(width, height);
 	var renderer = new PIXI.CanvasRenderer(width, height, {
-		view: document.getElementById(canvas),
+		view: view,
 		transparent: false,
 		autoResize: true,
       	backgroundColor: 0xe9eaed

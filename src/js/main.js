@@ -460,17 +460,17 @@ jQuery(document).ready(function($) {
 
 			// load the animations from CMS
 			$.ajax({
-				url: '/animations/device.js',
+				url: '/js/device-animation.js',
 				dataType: 'script',
 				cache: true,
 				async: true,
 				success: function() {
-					window.deviceAnimation('device-desktop-canvas', $('#device-desktop-canvas').width(), $('#device-desktop-canvas').height());
-					window.deviceAnimation('device-ipad-canvas', $('#device-ipad-canvas').width(), $('#device-ipad-canvas').height());
-					window.deviceAnimation('device-iphone-canvas', $('#device-iphone-canvas').width(), $('#device-iphone-canvas').height());
-					window.deviceAnimation('device-phone-canvas', $('#device-phone-canvas').width(), $('#device-phone-canvas').height());
-					window.deviceAnimation('device-laptop-canvas', $('#device-laptop-canvas').width(), $('#device-laptop-canvas').height());
-					window.deviceAnimation('device-tablet-canvas', $('#device-tablet-canvas').width(), $('#device-tablet-canvas').height());
+					window.deviceAnimation('device-desktop-canvas');
+					window.deviceAnimation('device-ipad-canvas');
+					window.deviceAnimation('device-iphone-canvas');
+					window.deviceAnimation('device-phone-canvas');
+					window.deviceAnimation('device-laptop-canvas');
+					window.deviceAnimation('device-tablet-canvas');
 				}
 			});
 		}
