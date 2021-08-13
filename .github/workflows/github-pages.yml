@@ -20,6 +20,7 @@ jobs:
       - uses: jeffreytse/jekyll-deploy-action@v0.2.1
         with:
           jekyll_src: './src'
-          jekyll_cfg: './_config.yml'
+          jekyll_cfg: '../_config.yml'
           token: ${{ secrets.WORKFLOW_TOKEN }}
+          bundler_ver: '2.1.4'
           cname: 'pixijs-dev.com'
