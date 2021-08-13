@@ -21,3 +21,5 @@ defaults:
       type: "location"
     values:
       layout: "location"
+
+include: [CNAME]
