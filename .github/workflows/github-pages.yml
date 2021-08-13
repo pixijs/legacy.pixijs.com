@@ -11,4 +11,5 @@ jobs:
       - uses: helaili/jekyll-action@v2
         with:
           target_branch: gh-pages
+          jekyll_src: src
           token: ${{ secrets.WORKFLOW_TOKEN }}
