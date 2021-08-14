@@ -1,0 +1,41 @@
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin transform($transform...) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin transform-origin($transform-origin...) {
+    -webkit-transform-origin: $transform-origin;
+    -moz-transform-origin: $transform-origin;
+    -o-transform-origin: $transform-origin;
+    transform-origin: $transform-origin;
+}
+
+@mixin opacity($opacity) {
+    -moz-opacity: $opacity;
+    -khtml-opacity: $opacity;
+    -webkit-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    border-radius: $radius;
+}
