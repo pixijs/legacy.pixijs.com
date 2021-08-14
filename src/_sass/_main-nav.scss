@@ -42,7 +42,7 @@
         font-size: 14px;
         line-height: 21px;
         letter-spacing: 0;
-        color: #333;
+        color: $gray700;
         cursor: pointer;
         position: relative;
         @include transition(color .3s cubic-bezier(.215, .61, .355, 1));
@@ -52,7 +52,7 @@
             position: absolute;
             top: 50%;
             right: 1px;
-            color: #8991a4;
+            color: $blue400;
             font: normal normal normal 14px/1 FontAwesome;
             margin-top: -10px;
             @include transition(color .3s cubic-bezier(.215, .61, .355, 1));
@@ -64,17 +64,17 @@
             left: 11px;
             right: 11px;
             bottom: 0;
-            background: #e91e63;
+            background: $pink500;
             height: 2px;
         }
         &.current.has-children:before {
             right: 0;
         }
         &.current, &:hover {
-            color: #e91e63;
+            color: $pink500;
             @include transition(color .25s cubic-bezier(.215, .61, .355, 1));
             &:after {
-                color: #e91e63;
+                color: $pink500;
                 @include transition(color .25s cubic-bezier(.215, .61, .355, 1));
             }
         }
@@ -82,7 +82,7 @@
     
     .alt-nav-item {
         text-transform: uppercase;
-        color: #c2185b;
+        color: $pink700;
         padding-left: 43px;
         background-size: 24px 24px;
         background-position: 15px 18px;
@@ -97,13 +97,13 @@
         .alt-nav-item,
         .main-nav-item {
             padding: 25px 15px;
-            color: #fff;
+            color: $white;
             &:hover {
-                color: #e91e63
+                color: $pink500
             }
         }
         .alt-nav-item {
-            color: #c2185b;
+            color: $pink700;
             padding-left: 43px;
             background-position: 15px 23px
         }

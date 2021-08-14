@@ -7,7 +7,7 @@ window.deviceAnimation = function(canvasId) {
 		view: view,
 		transparent: false,
 		autoResize: true,
-      	backgroundColor: 0xe9eaed
+      	backgroundColor: 0xecedf1
 	});
 
 	var stage = new PIXI.Container();

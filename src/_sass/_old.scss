@@ -1,7 +1,4 @@
 $custom-ease: cubic-bezier(.215, .61, .355, 1);
-$primary-color: #e91e63;
-$white: #fff;
-$black: #000;
 
 body {
     font-family: Roboto, sans-serif;
@@ -10,7 +7,7 @@ body {
     line-height: 21px;
     overflow-x: hidden;
     padding-top: 50px;
-    background: #000;
+    background: $black;
     &.home {
         padding-top: 740px;
         @include transition(padding-top 1s $custom-ease);
@@ -27,11 +24,11 @@ body {
 }
 
 a {
-    color: $primary-color;
+    color: $pink500;
     @include transition(color .3s $custom-ease);
     text-decoration: none;
     &:hover {
-        color: #d81b60;
+        color: $pink600;
         @include transition(color .3s $custom-ease);
     }
 }
@@ -115,7 +112,7 @@ a {
     z-index: 1;
     height: 740px;
     min-height: 620px;
-    background: #000;
+    background: $black;
     @include transition(height 1s $custom-ease);
     overflow: hidden;
     font-size: 0;
@@ -204,7 +201,7 @@ a {
             i {
                 width: 22px;
                 height: 2px;
-                background: $primary-color;
+                background: $pink500;
                 @include transform-origin(50% 50%);
                 position: absolute;
                 left: 50%;
@@ -218,10 +215,10 @@ a {
                 }
             }
             rect {
-                fill: $primary-color
+                fill: $pink500
             }
             path {
-                stroke: $primary-color;
+                stroke: $pink500;
                 stroke-width: 4px;
                 stroke-linecap: round;
                 fill: transparent
@@ -245,7 +242,7 @@ a {
             border-bottom: 1px solid #c8c8ca;
             @include box-shadow(0 0 5px 0 rgba(0, 0, 0, .35));
             .hamburger i {
-                background: $primary-color
+                background: $pink500
             }
         }
     }
@@ -266,15 +263,15 @@ a {
             width: 100%;
             height: 48px;
             line-height: 48px;
-            background: #edeef0;
-            color: #333;
+            background: $blue50;
+            color: $gray700;
             &:active, &:hover {
-                color: #c2185b;
-                background: #ecedf1
+                color: $pink700;
+                background: $blue50
             }
             &.current {
-                color: $primary-color;
-                background: #cfd4db
+                color: $pink500;
+                background: $blue100
             }
             
             &.alt-nav-item {
@@ -285,13 +282,13 @@ a {
                 background-size: 24px 24px;
                 background-position: 10px 12px;
                 background-repeat: no-repeat;
-                color: $primary-color
+                color: $pink500
             }
         }
     }
     .mobile-sub-nav {
-        border-top: 2px solid #b1b8c4;
-        border-bottom: 2px solid #b1b8c4;
+        border-top: 2px solid $blue200;
+        border-bottom: 2px solid $blue200;
         font-size: 0;
         a {
             vertical-align: top;
@@ -313,7 +310,7 @@ a {
     top: 70px;
     width: 100%;
     padding: 27px 0;
-    background: #ecedf1;
+    background: $blue50;
     border-top: 1px solid #c3c8ce;
     border-bottom: 1px solid #c3c8ce;
     -webkit-box-shadow: inset 0 1px 0 1px #e6e7eb;
@@ -328,7 +325,7 @@ a {
         height: 12px;
         z-index: 1;
         @include transform(rotate(-45deg));
-        background: #ecedf1;
+        background: $blue50;
         border-top: 1px solid #c3c8ce;
         border-right: 1px solid #c3c8ce;
         top: -7px;
@@ -354,15 +351,15 @@ a {
             position: relative;
         }
         h6 {
-            color: #333;
+            color: $gray700;
             margin: 0 0 16px;
         }
         p {
-            color: #666;
+            color: $gray500;
             margin: 0 0 19px;
         }
         a {
-            background: $primary-color;
+            background: $pink500;
             position: absolute;
             left: 25px;
             bottom: 20px;
@@ -389,7 +386,7 @@ a {
                 top: 0;
                 width: 0;
                 height: 100%;
-                background: #c2185b;
+                background: $pink700;
                 @include transition(width .3s $custom-ease);
                 z-index: 1
             }
@@ -416,13 +413,13 @@ a {
         overflow: hidden;
     }
     .brand-logos {
-        background: #ecedf1;
+        background: $blue50;
         padding: 25px 0 20px;
         .inner {
             padding: 0
         }
         p {
-            color: #627189;
+            color: $blue500;
             margin: 0 0 13px;
             padding: 0 20px;
             text-align: center;
@@ -478,7 +475,7 @@ a {
 }
 
 .main-content .features {
-    background: #465162 url(/images/tile.png) 0 0 repeat;
+    background: $blue700 url(/images/tile.png) 0 0 repeat;
     background-attachment: fixed;
     padding: 39px 0 48px;
     overflow: hidden;
@@ -506,7 +503,7 @@ a {
                 font-size: 14px;
                 line-height: 21px;
                 letter-spacing: -.01 em;
-                color: #919bac;
+                color: $blue300;
             }
             h3 {
                 margin: 0 0 33px;
@@ -533,8 +530,8 @@ a {
             }
             canvas {
                 position: absolute;
-                background: #e9eaed url(/images/device-background.png) center center;
-                border: 1px solid #b1b8c4
+                background: $blue50 url(/images/device-background.png) center center;
+                border: 1px solid $blue200
             }
             &.desktop {
                 z-index: 1;
@@ -628,17 +625,17 @@ a {
 
 
 .main-content .info-block {
-    background: #ecedf1;
+    background: $blue50;
     padding: 28px 20px;
     text-align: center;
     font-size: 0;
     .type_8 {
-        color: $primary-color;
+        color: $pink500;
         @include opacity(0);
         @include transform(translateY(-40px));
     }
     .type_9 {
-        color: #333;
+        color: $gray700;
         @include opacity(0);
         @include transform(translateY(40px));
     }
@@ -656,7 +653,7 @@ a {
 }
 
 .main-content .projects {
-    background: #38404e url(/images/tile.png) 0 0 repeat;
+    background: $blue800 url(/images/tile.png) 0 0 repeat;
     background-attachment: fixed;
     padding: 39px 0 28px;
     text-align: center;
@@ -666,7 +663,7 @@ a {
     }
     
     h5 {
-        color: #cfd4db;
+        color: $blue100;
         max-width: 860px;
         margin: 34px auto 35px
     }
@@ -688,7 +685,7 @@ a {
                 display: block;
                 width: 100%;
                 position: relative;
-                @include box-shadow(10px 10px 0 0 #272d37);
+                @include box-shadow(10px 10px 0 0 $blue900);
             }
             .thumbnail {
                 display: block;
@@ -696,11 +693,11 @@ a {
                 padding-top: 57.77777778%;
                 background-size: cover;
                 background-position: center center;
-                background-color: #272d37
+                background-color: $blue900
             }
             .description {
                 display: block;
-                background: #465162;
+                background: $blue700;
                 padding: 20px;
                 text-align: left;
                 h5 {
@@ -708,7 +705,7 @@ a {
                     margin: 0;
                 }
                 p {
-                    color: #cfd4db;
+                    color: $blue100;
                     margin: 0;
                 }
             }
@@ -718,7 +715,7 @@ a {
 
 .main-content .support {
     text-align: center;
-    background: #465162 url(/images/tile.png) 0 0 repeat;
+    background: $blue700 url(/images/tile.png) 0 0 repeat;
     background-attachment: fixed;
     font-size: 0;
     padding: 51px 0 54px;
@@ -794,17 +791,17 @@ a {
 
 .main-content .support .patrons li.sep {
     margin: 0 20px;
-    color: #919bac
+    color: $blue300
 }
 
 .main-content .features-list {
     text-align: center;
-    background: #f4f5f7;
+    background: $muted;
     padding: 49px 0 60px
 }
 
 .main-content .features-list h2 {
-    color: #333;
+    color: $gray700;
     margin: 0
 }
 
@@ -885,7 +882,7 @@ a {
 
 .main-content .get-started {
     text-align: center;
-    background: #ecedf1;
+    background: $blue50;
     padding: 49px 0 54px
 }
 
@@ -894,20 +891,20 @@ a {
 }
 
 .main-content .get-started h3 {
-    color: #333;
+    color: $gray700;
     margin: 0
 }
 
 .main-content .get-started h5 {
-    color: #333;
+    color: $gray700;
     @include opacity(0.8);
     margin: 21px 0 29px
 }
 
 .main-content .gallery-submit {
-    background: #272d37;
+    background: $blue900;
     min-height: 90px;
-    color: #b1b8c4;
+    color: $blue200;
     text-align: center;
     padding: 10px 0 20px
 }
@@ -920,7 +917,7 @@ a {
 }
 
 .main-content .faqs {
-    background: #ecedf1 url(/images/faq-tile.png) 0 0 repeat;
+    background: $blue50 url(/images/faq-tile.png) 0 0 repeat;
     background-attachment: fixed;
     padding: 30px 0 0
 }
@@ -932,26 +929,26 @@ a {
 .main-content .faqs h2 {
     margin-top: 0;
     margin-bottom: 19px;
-    color: #333;
+    color: $gray700;
     padding-left: 10px
 }
 
 .main-content .faqs .faq-list {
     background: $white;
     padding: 0;
-    border: 2px solid #cfd4db;
+    border: 2px solid $blue100;
     border-left: 0;
     border-right: 0;
     border-bottom: 0;
-    -webkit-box-shadow: 10px 10px 0 0 #cfd4db;
-    -moz-box-shadow: 10px 10px 0 0 #cfd4db;
-    box-shadow: 10px 10px 0 0 #cfd4db
+    -webkit-box-shadow: 10px 10px 0 0 $blue100;
+    -moz-box-shadow: 10px 10px 0 0 $blue100;
+    box-shadow: 10px 10px 0 0 $blue100
 }
 
 .main-content .faqs .faq-list h4 {
     margin: 21px 0 21px;
     padding: 0 10px;
-    color: #333
+    color: $gray700
 }
 
 .main-content .faqs .faq-list ul {
@@ -963,8 +960,8 @@ a {
 .main-content .faqs .faq-list ul li {
     display: block;
     margin-top: -2px;
-    border-top: 2px solid #b1b8c4;
-    border-bottom: 2px solid #b1b8c4;
+    border-top: 2px solid $blue200;
+    border-bottom: 2px solid $blue200;
     font-size: 0;
     cursor: pointer;
     position: relative
@@ -975,7 +972,7 @@ a {
     display: inline-block;
     vertical-align: top;
     margin: 0;
-    color: #666
+    color: $gray500
 }
 
 .main-content .faqs .faq-list ul li .num {
@@ -993,7 +990,7 @@ a {
 }
 
 .main-content .faqs .faq-list ul li .big-text {
-    color: #666;
+    color: $gray500;
     padding-left: 10px;
     padding-right: 50px;
     margin: 0 0 16px;
@@ -1012,7 +1009,7 @@ a {
 .main-content .faqs .faq-list ul li .indicator .v {
     position: absolute;
     display: block;
-    background: #627189
+    background: $blue500
 }
 
 .main-content .faqs .faq-list ul li .indicator .h {
@@ -1033,7 +1030,7 @@ a {
 
 .main-content .faqs .faq-list ul li.open h6,
 .main-content .faqs .faq-list ul li:hover h6 {
-    color: $primary-color;
+    color: $pink500;
     @include transition(color .25s $custom-ease);
 }
 
@@ -1043,7 +1040,7 @@ a {
 .main-content .faqs .faq-list ul li:hover .indicator .v {
     position: absolute;
     display: block;
-    background: #566378;
+    background: $blue600;
     @include transition(all .25s $custom-ease);
 }
 
@@ -1052,7 +1049,7 @@ a {
 }
 
 .main-content .tutorials {
-    background: #ecedf1 url(/images/faq-tile.png) 0 0 repeat;
+    background: $blue50 url(/images/faq-tile.png) 0 0 repeat;
     background-attachment: fixed;
     padding: 69px 0 100px
 }
@@ -1060,7 +1057,7 @@ a {
 .main-content .tutorials h2 {
     margin-top: 0;
     margin-bottom: 36px;
-    color: #333
+    color: $gray700
 }
 
 .main-content .tutorials .row {
@@ -1093,17 +1090,17 @@ a {
 .main-content .tutorials .list {
     background: $white;
     padding: 0 40px 50px;
-    border: 2px solid #cfd4db;
-    -webkit-box-shadow: 10px 10px 0 0 #cfd4db;
-    -moz-box-shadow: 10px 10px 0 0 #cfd4db;
-    box-shadow: 10px 10px 0 0 #cfd4db
+    border: 2px solid $blue100;
+    -webkit-box-shadow: 10px 10px 0 0 $blue100;
+    -moz-box-shadow: 10px 10px 0 0 $blue100;
+    box-shadow: 10px 10px 0 0 $blue100
 }
 
 .main-content .tutorials .list h4 {
     margin: 40px 0 25px;
-    color: #333;
+    color: $gray700;
     padding-bottom: 18px;
-    border-bottom: 2px solid #b1b8c4;
+    border-bottom: 2px solid $blue200;
     position: relative
 }
 
@@ -1113,7 +1110,7 @@ a {
     height: 4px;
     bottom: -3px;
     content: "";
-    background: $primary-color;
+    background: $pink500;
     position: absolute
 }
 
@@ -1151,7 +1148,7 @@ a {
     width: 8.33333333%;
     padding-left: 20px;
     margin: 0;
-    color: #666
+    color: $gray500
 }
 
 .main-content .tutorials .list ul li .details {
@@ -1161,24 +1158,24 @@ a {
 
 .main-content .tutorials .list ul li h6 {
     margin: -1px 0 0 0;
-    color: $primary-color;
+    color: $pink500;
     @include transition(color .3s $custom-ease);
 }
 
 .main-content .tutorials .list ul li .author {
-    color: #666;
+    color: $gray500;
     margin: -1px 0 6px
 }
 
 .main-content .tutorials .list ul li .date {
     margin: 0;
-    color: #909090;
+    color: $gray300;
     text-transform: uppercase
 }
 
 .main-content .tutorials .list ul li.open h6,
 .main-content .tutorials .list ul li:hover h6 {
-    color: #c2185b;
+    color: $pink700;
     @include transition(color .25s $custom-ease);
 }
 
@@ -1190,24 +1187,24 @@ a {
 
 .main-content .tutorials .books h4 {
     margin: 0 0;
-    color: #333;
+    color: $gray700;
     padding: 48px 35px 0
 }
 
 .main-content .tutorials .books h6 {
-    color: $primary-color;
+    color: $pink500;
     @include transition(color .3s $custom-ease);
     margin: 0 0 29px
 }
 
 .main-content .tutorials .books .author {
-    color: #666;
+    color: $gray500;
     margin: 0 0 6px
 }
 
 .main-content .tutorials .books .date {
     margin: 0;
-    color: #909090;
+    color: $gray300;
     text-transform: uppercase
 }
 
@@ -1223,7 +1220,7 @@ a {
 }
 
 .main-content .tutorials .books a:hover h6 {
-    color: #c2185b;
+    color: $pink700;
     @include transition(color .25s $custom-ease);
 }
 
@@ -1232,7 +1229,7 @@ a {
     max-height: 750px;
     height: 100%;
     text-align: center;
-    background: #000;
+    background: $black;
     background-size: cover;
     background-position: center center;
     font-size: 0;
@@ -1264,7 +1261,7 @@ a {
 }
 
 .main-content .services {
-    background: #38404e url(/images/tile.png) 0 0 repeat;
+    background: $blue800 url(/images/tile.png) 0 0 repeat;
     padding: 51px 0 58px;
     text-align: center
 }
@@ -1308,10 +1305,10 @@ a {
 
 .main-content .services .services-list li .border {
     display: block;
-    border: 2px solid #919bac;
+    border: 2px solid $blue300;
     padding: 28px;
     height: 100%;
-    background: #38404e
+    background: $blue800
 }
 
 .main-content .services .services-list li .icon {
@@ -1342,7 +1339,7 @@ a {
 .main-content .services .services-list li .r3,
 .main-content .services .services-list li .r4 {
     position: absolute;
-    background: #919bac
+    background: $blue300
 }
 
 .main-content .services .services-list li .r1 {
@@ -1374,13 +1371,13 @@ a {
 }
 
 .main-content .testimonials {
-    background: #ecedf1;
+    background: $blue50;
     padding: 57px 15px 53px
 }
 
 .main-content .testimonials h6.bold {
     margin: 0;
-    color: #333;
+    color: $gray700;
     text-align: center
 }
 
@@ -1421,7 +1418,7 @@ a {
     height: 100px;
     behavior: url(css/border-radius.htc);
     @include border-radius(50px);
-    background: #cfd4db
+    background: $blue100
 }
 
 .main-content .testimonials .mask .testimonial .text {
@@ -1441,7 +1438,7 @@ a {
     font-style: italic;
     font-size: 21px;
     line-height: 30px;
-    color: #666;
+    color: $gray500;
     margin: 0 0 15px;
     position: relative
 }
@@ -1472,7 +1469,7 @@ a {
 .main-content .testimonials .mask .flickity-page-dots li {
     width: 6px;
     height: 6px;
-    background: #b1b8c4;
+    background: $blue200;
     display: inline-block;
     behavior: url(css/border-radius.htc);
     @include border-radius(3px);
@@ -1480,7 +1477,7 @@ a {
 }
 
 .main-content .testimonials .mask .flickity-page-dots li.is-selected {
-    background: #7a869a
+    background: $blue400
 }
 
 .main-content .production-servives {
@@ -1505,7 +1502,7 @@ a {
 }
 
 .main-content .contact {
-    background: #ecedf1;
+    background: $blue50;
     padding: 52px 0 60px;
     text-align: center
 }
@@ -1515,7 +1512,7 @@ a {
 }
 
 .main-content .contact h3 {
-    color: #333;
+    color: $gray700;
     margin: 0 0 20px
 }
 
@@ -1525,15 +1522,15 @@ a {
 }
 
 .main-content .contact h6 a {
-    color: $primary-color
+    color: $pink500
 }
 
 .main-content .contact h6 a:hover {
-    color: #c2185b
+    color: $pink700
 }
 
 .main-footer {
-    background: #272d37;
+    background: $blue900;
     padding: 70px 0 30px;
     position: relative;
     z-index: 2
@@ -1556,7 +1553,7 @@ a {
 
 .main-footer p {
     margin: 0 0 20px 0;
-    color: #919bac
+    color: $blue300
 }
 
 .main-footer a {
@@ -1565,7 +1562,7 @@ a {
 }
 
 .main-footer a:hover {
-    color: $primary-color
+    color: $pink500
 }
 
 .main-footer h6 {
@@ -1639,13 +1636,13 @@ a {
 
 .main-footer .social-links a {
     display: inline-block;
-    background-color: #919bac;
+    background-color: $blue300;
     width: 50px;
     height: 50px;
     line-height: 50px;
     font-size: 24px;
     text-align: center;
-    color: #272d37;
+    color: $blue900;
     margin: 0 5px;
     @include transition(background-color .3s $custom-ease);
 }
@@ -1687,7 +1684,7 @@ a {
 }
 
 .submit-modal .window {
-    background: #ecedf1;
+    background: $blue50;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -1700,7 +1697,7 @@ a {
     position: absolute;
     right: 0;
     top: 0;
-    color: #b1b8c4;
+    color: $blue200;
     @include transition(color .3s $custom-ease);
     font-size: 30px;
     cursor: pointer;
@@ -1713,18 +1710,18 @@ a {
 }
 
 .submit-modal .window .close-modal line {
-    stroke: #b1b8c4;
+    stroke: $blue200;
     stroke-width: 2px;
     @include transition(stroke .3s $custom-ease);
 }
 
 .submit-modal .window .close-modal:hover {
-    color: #7a869a;
+    color: $blue400;
     @include transition(color .25s $custom-ease);
 }
 
 .submit-modal .window .close-modal:hover line {
-    stroke: #7a869a;
+    stroke: $blue400;
     @include transition(stroke .25s $custom-ease);
 }
 
@@ -1779,13 +1776,13 @@ a {
 
 .submit-modal .image-preview-container .preview {
     z-index: 1;
-    border: 2px solid #919bac;
+    border: 2px solid $blue300;
     background-position: center center;
     background-size: cover
 }
 
 .submit-modal .image-preview-container .preview.drop {
-    border-color: $primary-color
+    border-color: $pink500
 }
 
 .submit-modal .image-preview-container .preview.error {
@@ -1807,11 +1804,11 @@ a {
 
 .submit-modal .image-preview-container .preview .instructions p {
     margin: 0;
-    color: #7a869a
+    color: $blue400
 }
 
 .submit-form {
-    background: #272d37;
+    background: $blue900;
     position: absolute;
     left: 0;
     top: 0;
@@ -1838,7 +1835,7 @@ a {
 
 .submit-form h4 {
     text-align: center;
-    color: #cfd4db;
+    color: $blue100;
     font-weight: 300;
     font-weight: 22px;
     line-height: 30px
@@ -1859,7 +1856,7 @@ a {
 }
 
 .submit-form .form-group.focused .control-label {
-    color: #b1b8c4
+    color: $blue200
 }
 
 .submit-form .image-upload-container {
@@ -1892,7 +1889,7 @@ a {
 
 .submit-form .image-upload-container .instructions {
     width: 65%;
-    color: #b1b8c4;
+    color: $blue200;
     padding-left: 20px
 }
 
@@ -1922,7 +1919,7 @@ a {
 }
 
 .inline-submit-form {
-    background: #ecedf1;
+    background: $blue50;
     width: 100%;
     max-width: 400px;
     margin: 40px auto 0;
@@ -2011,7 +2008,7 @@ a {
 .button {
     padding: 17px 0 17px 0;
     height: 50px;
-    background: $primary-color;
+    background: $pink500;
     color: $white;
     position: relative;
     text-align: center;
@@ -2034,7 +2031,7 @@ a {
         top: 0;
         width: 0;
         height: 100%;
-        background: #c2185b;
+        background: $pink700;
         content: "";
         display: block;
         @include transition(width .3s $custom-ease);
@@ -2073,7 +2070,7 @@ a {
     
     .r1, .r2, .r3, .r4 { 
         position: absolute;
-        background: $primary-color
+        background: $pink500
     }
     .r1 {
         width: 2px;
@@ -2120,31 +2117,31 @@ a {
             @include transition(all .25s $custom-ease);
         }
         .r1, .r2, .r3, .r4 {
-            background: #c2185b
+            background: $pink700
         }
     }
     
     &.white {
         background: $white;
-        color: $primary-color;
+        color: $pink500;
         &:before {
-            background: #fce4ec
+            background: $pink50;
         }
         .r1, .r2, .r3, .r4 {
             background: $white
         }
         
         svg line {
-            stroke: $primary-color
+            stroke: $pink500
         }
         
         &.blue-text {
-            color: #465162;
+            color: $blue700;
             &:before {
-                background: #ecedf1
+                background: $blue50
             }
             svg line {
-                stroke: #465162
+                stroke: $blue700
             }
         }
     }
@@ -2166,9 +2163,9 @@ a {
             bottom: -8px
         }
         &.hover {
-            color: $primary-color;
+            color: $pink500;
             svg line {
-                stroke: $primary-color
+                stroke: $pink500
             }
             .rect {
                 right: -6px;
@@ -2181,16 +2178,16 @@ a {
     }
     
     &.pink {
-        border: 2px solid $primary-color;
-        color: $primary-color;
+        border: 2px solid $pink500;
+        color: $pink500;
         svg line {
-            stroke: $primary-color
+            stroke: $pink500
         }
         &:before {
-            background: $primary-color
+            background: $pink500
         }
         .r1, .r2, .r3, .r4 {
-            background: $primary-color
+            background: $pink500
         }
         &:hover {
             color: $white;
@@ -2198,7 +2195,7 @@ a {
                 stroke: $white
             }
             .r1, .r2, .r3, .r4 {
-                background: $primary-color
+                background: $pink500
             }
         }
     }
@@ -2231,7 +2228,7 @@ a {
         top: 15px;
         height: 20px;
         width: 1px;
-        background: #b1b8c4
+        background: $blue200
     }
 }
 
@@ -2251,7 +2248,7 @@ h3 {
     display: block;
     width: 100px;
     height: 3px;
-    background: #919bac;
+    background: $blue300;
     content: "";
     margin: 13px auto 0
 }
@@ -2339,7 +2336,7 @@ p.small-text {
     width: 100%;
     height: 37px;
     line-height: 1.846;
-    color: #666;
+    color: $gray500;
     background-color: transparent;
     background-image: none;
     -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
@@ -2355,7 +2352,7 @@ textarea.form-control {
 [type=text].form-control,
 textarea {
     @include border-radius(0);
-    @include box-shadow(inset 0 -2px 0 #b1b8c4);
+    @include box-shadow(inset 0 -2px 0 $blue200);
     padding: 0;
     border: none;
     -webkit-appearance: none;
@@ -2365,7 +2362,7 @@ textarea {
 input.form-control:focus,
 input[type=text]:focus,
 textarea:focus {
-    @include box-shadow(inset 0 -2px 0 $primary-color);
+    @include box-shadow(inset 0 -2px 0 $pink500);
     outline: 0
 }
 
@@ -2408,11 +2405,11 @@ form {
     transform: translate3d(0, 22px, 0) scale(1);
     transform-origin: left top;
     transition: 240ms;
-    color: #7a869a
+    color: $blue400
 }
 
 .form-group.focused .control-label {
-    color: $primary-color;
+    color: $pink500;
     transform: scale(.8)
 }
 
@@ -2434,7 +2431,7 @@ form {
 }
 
 .form-group.focused .form-control::-webkit-input-placeholder {
-    color: #bbb
+    color: $gray200
 }
 
 .form-group .error,
@@ -2449,7 +2446,7 @@ form {
 }
 
 .form-group .helper {
-    color: #b1b8c4
+    color: $blue200
 }
 
 .text-center {
@@ -2458,86 +2455,6 @@ form {
 
 .text-right {
     text-align: right
-}
-
-.blue50 {
-    color: #ecedf1
-}
-
-.blue100 {
-    color: #cfd4db
-}
-
-.blue200 {
-    color: #b1b8c4
-}
-
-.blue300 {
-    color: #919bac
-}
-
-.blue400 {
-    color: #7a869a
-}
-
-.blue500 {
-    color: #627189
-}
-
-.blue600 {
-    color: #566378
-}
-
-.blue700 {
-    color: #465162
-}
-
-.blue800 {
-    color: #38404e
-}
-
-.blue900 {
-    color: #272d37
-}
-
-.pink50 {
-    color: #fce4ec
-}
-
-.pink100 {
-    color: #f8bbd0
-}
-
-.pink200 {
-    color: #f48fb1
-}
-
-.pink300 {
-    color: #f06292
-}
-
-.pink400 {
-    color: #ec407a
-}
-
-.pink500 {
-    color: $primary-color
-}
-
-.pink600 {
-    color: #d81b60
-}
-
-.pink700 {
-    color: #c2185b
-}
-
-.pink800 {
-    color: #ad1457
-}
-
-.pink900 {
-    color: #880e4f
 }
 
 .margin-top-0 {
@@ -2797,13 +2714,13 @@ form {
     .main-content .faqs h2 {
         margin-top: 0;
         margin-bottom: 36px;
-        color: #333;
+        color: $gray700;
         padding-left: 0
     }
 
     .main-content .faqs .faq-list {
         padding: 0 40px 50px;
-        border: 2px solid #cfd4db
+        border: 2px solid $blue100
     }
 
     .main-content .faqs .faq-list h4 {
