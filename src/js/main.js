@@ -215,7 +215,8 @@ jQuery(document).ready(function($) {
 		});
 
 		if (site.clickType !== 'tap') {
-
+			// header animation is heavy, don't load on mobile
+			$('iframe.animation').attr('src', '/header/index.html');
 			window.deviceAnimations('.device canvas');
 			
 			// Scrolling Desktop
