@@ -3,7 +3,6 @@ jQuery(document).ready(function($) {
 
 	var site = {
 		clickType: Modernizr.touchevents ? 'tap' : 'click',
-		offline: false,
 		base: $('#site-base').val(),
 		stageWidth: 0,
 		stageHeight: 0,
@@ -57,23 +56,16 @@ jQuery(document).ready(function($) {
 
 	// async script loading
 	site.loadScriptsAsync = function() {
-		if (site.offline) {
-			site.scriptsToLoad.push('/js/greensock/TweenMax.min.js');
-		} else {
-			site.scriptsToLoad.push('https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js');
-		}
-	
+		site.scriptsToLoad.push('https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js');	
 		if (site.clickType === 'tap') {
-			site.scriptsToLoad.push('/js/jquery.mobile.custom.min.js');
+			site.scriptsToLoad.push('/js/vendor/jquery.mobile.custom.min.js');
 		}
 		
 		if (site.base === 'home') {
-			if (site.offline) {
-				site.scriptsToLoad.push('/js/offline/flickity.pkgd.min.js');
-			} else {
-				site.scriptsToLoad.push('https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.min.js');
+			site.scriptsToLoad.push('https://npmcdn.com/flickity@1.2/dist/flickity.pkgd.min.js');
+			if (site.clickType !== 'tap') {
+				site.scriptsToLoad.push("/js/device-animation.js");
 			}
-			// site.scriptsToLoad.push('/js/pixijs/pixi.min.js');
 		}
 
 		for (var i=0; i<site.scriptsToLoad.length; i++) {
@@ -224,6 +216,8 @@ jQuery(document).ready(function($) {
 
 		if (site.clickType !== 'tap') {
 
+			window.deviceAnimations('.device canvas');
+			
 			// Scrolling Desktop
 
 			$(document).scroll(function() {

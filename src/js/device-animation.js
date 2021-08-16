@@ -1,3 +1,23 @@
+// Minimum packages required to run this animation
+// this was configured from https://pixijs.io/customize/
+var packages = [
+	'polyfill',
+	'constants',
+	'math',
+	'runner',
+	'settings',
+	'ticker',
+	'utils',
+	'display',
+	'core',
+	'canvas-display',
+	'sprite',
+	'canvas-renderer',
+	'graphics',
+	'canvas-sprite',
+	'canvas-graphics'
+];
+
 /**
  * Homepage device animation with red bubble flying around
  */
@@ -89,13 +109,50 @@ var deviceAnimation = function(view) {
 	};
 }
 
+var init = function (selector) {
+	// Setup plugins
+	PIXI.CanvasRenderer.registerPlugin('graphics', PIXI.CanvasGraphicsRenderer);
+	PIXI.CanvasRenderer.registerPlugin('sprite', PIXI.CanvasSpriteRenderer);
+	
+	/**
+	 * Create a single ticker to update all canvases
+	 * more performant.
+	 */
+	var canvases = document.querySelectorAll(selector);
+	var ticker = new PIXI.Ticker();
+	for (var i = 0; i < canvases.length; i++) {
+		ticker.add(deviceAnimation(canvases[i]));
+	}
+	ticker.start();
+};
+
 /**
- * Create a single ticker to update all canvases
- * more performant.
+ * Start the device animations.
+ * @param selector - Query selector for all canvas elements.
  */
-var canvases = document.querySelectorAll('.device canvas');
-var ticker = new PIXI.Ticker();
-for (var i = 0; i < canvases.length; i++) {
-	ticker.add(deviceAnimation(canvases[i]));
-}
-ticker.start();
+window.deviceAnimations = function(selector) {
+	// Load the packages required
+	var scripts = [];
+	packages.forEach(function(packageName) {
+		scripts.push('https://pixijs.download/release/packages/' + packageName + '.js');
+	});
+
+	// Check to see if we've finished loading all the packages
+	var index = 0;
+	var checkCompleted = function () {
+		index++;
+		if (index < scripts.length) {
+			loadNextScript();
+		}
+		else {
+			init(selector);
+		}
+	};
+	var loadNextScript = function(script) {
+		var script = document.createElement("script");
+		script.src = scripts[index];
+		document.head.appendChild(script);
+		script.onload = checkCompleted;
+	};
+	loadNextScript();
+};
