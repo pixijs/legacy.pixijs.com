@@ -1,0 +1,19 @@
+.main-content .get-started {
+    text-align: center;
+    background: $blue50;
+    padding: 49px 0 54px;
+    .inner {
+        max-width: 920px
+    }
+    
+    h3 {
+        color: $gray700;
+        margin: 0
+    }
+    
+    h5 {
+        color: $gray700;
+        @include opacity(0.8);
+        margin: 21px 0 29px
+    }
+}

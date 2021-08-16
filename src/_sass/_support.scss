@@ -1,0 +1,38 @@
+.main-content .support {
+    text-align: center;
+    background: $blue700 url(/images/tile.png) 0 0 repeat;
+    background-attachment: fixed;
+    font-size: 0;
+    padding: 51px 0 54px;
+    position: relative;
+    overflow: hidden;
+    .bg-1, .bg-2 {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-size: 1114px 460px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat
+    }
+    .bg-1 {
+        background-image: url(/images/floaters-1.png)
+    }
+    .bg-2 {
+        background-image: url(/images/floaters-2.png)
+    }
+    .inner {
+        max-width: 860px;
+        z-index: 2
+    }
+    h3, h5 {
+        color: $white;
+        margin: 0
+    }
+    h5 {
+        margin: 21px 0 34px;
+        @include opacity(0.8);
+    }
+}

@@ -1,0 +1,160 @@
+
+.main-content .tutorials {
+    background: $blue50 url(/images/faq-tile.png) 0 0 repeat;
+    background-attachment: fixed;
+    padding: 69px 0 100px;
+    
+    h2 {
+        margin-top: 0;
+        margin-bottom: 36px;
+        color: $gray700
+    }
+    
+    .row {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: -20px
+    }
+    
+    .row:after {
+        display: table;
+        content: "";
+        clear: both
+    }
+    
+    .col-0,
+    .col-1,
+    .col-10,
+    .col-11,
+    .col-12,
+    .col-2,
+    .col-3,
+    .col-4,
+    .col-5,
+    .col-6,
+    .col-7,
+    .col-8 {
+        padding: 20px
+    }
+    
+    .list {
+        background: $white;
+        padding: 0 40px 50px;
+        border: 2px solid $blue100;
+        @include box-shadow(10px 10px 0 0 $blue100);
+        h4 {
+            margin: 40px 0 25px;
+            color: $gray700;
+            padding-bottom: 18px;
+            border-bottom: 2px solid $blue200;
+            position: relative;
+            &:after {
+                display: block;
+                width: 60px;
+                height: 4px;
+                bottom: -3px;
+                content: "";
+                background: $pink500;
+                position: absolute
+            }
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: block;
+                font-size: 0;
+                position: relative;
+                margin: 16px 0 0 0;
+                &:after {
+                    display: table;
+                    content: "";
+                    clear: both;
+                }
+                a {
+                    display: block;
+                }
+                .details, .num {
+                    float: left;
+                    vertical-align: top;
+                    margin: 0;
+                }
+                .num {
+                    width: 8.33333333%;
+                    padding-left: 20px;
+                    margin: 0;
+                    color: $gray500;
+                }
+                .details {
+                    width: 91.66666667%;
+                    padding-left: 30px;
+                }
+                h6 {
+                    margin: -1px 0 0 0;
+                    color: $pink500;
+                    @include transition(color .3s $custom-ease);
+                }
+                .author {
+                    color: $gray500;
+                    margin: -1px 0 6px
+                }
+                .date {
+                    margin: 0;
+                    color: $gray300;
+                    text-transform: uppercase
+                }
+                &.open h6,
+                &:hover h6 {
+                    color: $pink700;
+                    @include transition(color .25s $custom-ease);
+                }
+            }
+        }
+    }
+    
+    .books {
+        a, h4 {
+            background: $white;
+            padding: 35px 35px 45px
+        }
+        
+        h4 {
+            margin: 0 0;
+            color: $gray700;
+            padding: 48px 35px 0
+        }
+        
+        h6 {
+            color: $pink500;
+            @include transition(color .3s $custom-ease);
+            margin: 0 0 29px
+        }
+        .author {
+            color: $gray500;
+            margin: 0 0 6px
+        }
+        
+        .date {
+            margin: 0;
+            color: $gray300;
+            text-transform: uppercase
+        }
+        
+        a {
+            display: block;
+            padding-top: 0;
+            h4 {
+                padding-left: 0;
+                padding-right: 0;
+                padding-bottom: 8px
+            }
+            &:hover {
+                h6 {
+                    color: $pink700;
+                    @include transition(color .25s $custom-ease);
+                }
+            }
+        }
+    }    
+}

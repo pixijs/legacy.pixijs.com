@@ -1,0 +1,235 @@
+.button-center {
+    display: block;
+    text-align: center
+}
+
+.button-contrainer {
+    font-size: 0
+}
+
+.button {
+    padding: 17px 0 17px 0;
+    height: 50px;
+    background: $pink500;
+    color: $white;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    border: 0;
+    margin: 13px auto 12px auto;
+    display: block;
+    width: 100%;
+    max-width: 240px;
+    &.fixed {
+        width: 208px;
+        padding-left: 0;
+        padding-right: 0
+    }
+    
+    &:before {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 100%;
+        background: $pink700;
+        content: "";
+        display: block;
+        @include transition(width .3s $custom-ease);
+    }
+    &:active,
+    &:focus {
+        outline: 0
+    }
+    
+    span, svg {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        vertical-align: middle
+    }
+    svg {
+        width: 23px;
+        height: 14px;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -7px;
+        @include transition(all .3s $custom-ease);
+        line {
+            stroke: $white;
+            stroke-width: 2px
+        }
+    }
+    .rect {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        right: -6px;
+        bottom: -6px
+    }
+    
+    .r1, .r2, .r3, .r4 { 
+        position: absolute;
+        background: $pink500
+    }
+    .r1 {
+        width: 2px;
+        height: 6px;
+        bottom: 0;
+        left: 0
+    }
+    
+    .r2 {
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        width: 100%
+    }
+    
+    .r3 {
+        width: 2px;
+        top: 0;
+        height: 100%;
+        right: 0
+    }
+    
+    .r4 {
+        width: 6px;
+        height: 2px;
+        right: 0;
+        top: 0
+    }
+    
+    &.hover {
+        @include transform(translateX(2px) translateY(2px) !important);
+        color: $white;
+        &:before {
+            width: 100%;
+            @include transition(width .25s $custom-ease);
+        }
+        .rect {
+            right: -4px;
+            bottom: -4px
+        }
+        
+        svg {
+            @include transform(translateX(4px));
+            @include transition(all .25s $custom-ease);
+        }
+        .r1, .r2, .r3, .r4 {
+            background: $pink700
+        }
+    }
+    
+    &.white {
+        background: $white;
+        color: $pink500;
+        &:before {
+            background: $pink50;
+        }
+        .r1, .r2, .r3, .r4 {
+            background: $white
+        }
+        
+        svg line {
+            stroke: $pink500
+        }
+        
+        &.blue-text {
+            color: $blue700;
+            &:before {
+                background: $blue50
+            }
+            svg line {
+                stroke: $blue700
+            }
+        }
+    }
+
+    
+    &.outline {
+        background: 0 0;
+        border: 2px solid $white;
+        padding: 15px 0 15px 0;
+        &:before {
+            background: $white
+        }
+        .r1, .r2, .r3, .r4 {
+            background: $white
+        }
+        
+        .rect {
+            right: -8px;
+            bottom: -8px
+        }
+        &.hover {
+            color: $pink500;
+            svg line {
+                stroke: $pink500
+            }
+            .rect {
+                right: -6px;
+                bottom: -6px
+            }
+            .r1, .r2, .r3, .r4 {
+                background: $white
+            }
+        }
+    }
+    
+    &.pink {
+        border: 2px solid $pink500;
+        color: $pink500;
+        svg line {
+            stroke: $pink500
+        }
+        &:before {
+            background: $pink500
+        }
+        .r1, .r2, .r3, .r4 {
+            background: $pink500
+        }
+        &:hover {
+            color: $white;
+            svg line {
+                stroke: $white
+            }
+            .r1, .r2, .r3, .r4 {
+                background: $pink500
+            }
+        }
+    }
+
+    &.transparent {
+        background: 0 0;
+        margin-top: 13px;
+        margin-bottom: 13px;
+        padding: 17px 30px;
+        &:before {
+            background: 0 0
+        }
+        svg {
+            margin-left: 20px;
+            position: static;
+            right: 0;
+            top: 0;
+            margin-top: 0
+        }
+        &.hover {
+            @include transform(translateX(0) translateY(0) !important);
+        }
+    }
+    
+    &.border-after:after {
+        display: none;
+        content: "";
+        position: absolute;
+        right: -15px;
+        top: 15px;
+        height: 20px;
+        width: 1px;
+        background: $blue200
+    }
+}

@@ -1,0 +1,112 @@
+.main-content .faqs {
+    background: $blue50 url(/images/faq-tile.png) 0 0 repeat;
+    background-attachment: fixed;
+    padding: 30px 0 0;
+    .inner {
+        padding: 0
+    }
+    
+    h2 {
+        margin-top: 0;
+        margin-bottom: 19px;
+        color: $gray700;
+        padding-left: 10px;
+    }
+    .faq-list {
+        background: $white;
+        padding: 0;
+        border: 2px solid $blue100;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0;
+        @include box-shadow(10px 10px 0 0 $blue100);
+        h4 {
+            margin: 21px 0 21px;
+            padding: 0 10px;
+            color: $gray700
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li {
+                display: block;
+                margin-top: -2px;
+                border-top: 2px solid $blue200;
+                border-bottom: 2px solid $blue200;
+                font-size: 0;
+                cursor: pointer;
+                position: relative;
+                .num, h6 {
+                    display: inline-block;
+                    vertical-align: top;
+                    margin: 0;
+                    color: $gray500;
+                }
+                .num {
+                    width: 16.66666667%;
+                    padding-left: 20px;
+                    margin-top: 19px;
+                    display: none;
+                }
+                
+                h6 {
+                    width: 100%;
+                    margin: 16px 0;
+                    @include transition(color .3s $custom-ease);
+                    padding-left: 10px;
+                }
+                
+                .big-text {
+                    color: $gray500;
+                    padding-left: 10px;
+                    padding-right: 50px;
+                    margin: 0 0 16px;
+                    display: none;
+                }
+                .indicator {
+                    position: absolute;
+                    right: 12px;
+                    top: 16px;
+                    width: 26px;
+                    height: 26px;
+                    .h, .v {
+                        position: absolute;
+                        display: block;
+                        background: $blue500;
+                    }
+                    .h {
+                        width: 100%;
+                        height: 2px;
+                        left: 0;
+                        top: 12px;
+                    }
+                    .v {
+                        width: 2px;
+                        height: 100%;
+                        left: 12px;
+                        top: 0;
+                        @include transform-origin(0 50%);
+                        @include transition(all .3s $custom-ease);
+                    }
+                }
+                &.open, &:hover {
+                    h6 {
+                        color: $pink500;
+                        @include transition(color .25s $custom-ease);
+                    }
+                    .indicator .h, .indicator .v {
+                        position: absolute;
+                        display: block;
+                        background: $blue600;
+                        @include transition(all .25s $custom-ease);
+                    }
+                }
+                &.open .indicator .v {
+                    @include transform(scale(1, 0));
+                }
+            }
+        }
+    }
+}

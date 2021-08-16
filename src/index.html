@@ -149,16 +149,32 @@ features:
 			<img src="/images/devices/device-tablet.png" alt="Tablet" />
 			<canvas id="device-tablet-canvas"></canvas>
 		</div>
+		<!-- created from https://pixijs.io/customize -->
+		<script src="https://pixijs.download/release/packages/polyfill.min.js"></script>
+		<script src="https://pixijs.download/release/packages/constants.min.js"></script>
+		<script src="https://pixijs.download/release/packages/math.min.js"></script>
+		<script src="https://pixijs.download/release/packages/runner.min.js"></script>
+		<script src="https://pixijs.download/release/packages/settings.min.js"></script>
+		<script src="https://pixijs.download/release/packages/ticker.min.js"></script>
+		<script src="https://pixijs.download/release/packages/utils.min.js"></script>
+		<script src="https://pixijs.download/release/packages/display.min.js"></script>
+		<script src="https://pixijs.download/release/packages/core.min.js"></script>
+		<script src="https://pixijs.download/release/packages/canvas-display.min.js"></script>
+		<script src="https://pixijs.download/release/packages/sprite.min.js"></script>
+		<script src="https://pixijs.download/release/packages/canvas-renderer.min.js"></script>
+		<script src="https://pixijs.download/release/packages/graphics.min.js"></script>
+		<script src="https://pixijs.download/release/packages/canvas-sprite.min.js"></script>
+		<script src="https://pixijs.download/release/packages/canvas-graphics.min.js"></script>
+		<script>
+			PIXI.Renderer.registerPlugin('batch', PIXI.BatchRenderer);
+			PIXI.CanvasRenderer.registerPlugin('graphics', PIXI.CanvasGraphicsRenderer);
+			PIXI.CanvasRenderer.registerPlugin('sprite', PIXI.CanvasSpriteRenderer);
+		</script>
+		<script src="/js/device-animation.js"></script>
 	</div>
 	<div class="button-center calc">
 		<a href="#features-list" class="button outline" data-delay="0.9">All features</a>
 	</div>
-</section>
-
-<section class="info-block">
-	<img src="/images/dotjs-logo.png" alt="dotJS Logo" class="dotjs" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
-	<span class="type_8" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">Award Winner&nbsp;</span>
-	<span class="type_9" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);"> - Most Innovative Frontend JavaScript Project of 2014</span>
 </section>
 
 <section class="projects">

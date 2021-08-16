@@ -37,9 +37,7 @@
 		{{ content }}
 		{% include page/footer.html %}
 		
-		<input type="hidden" id="site-root" value="/" />
 		<input type="hidden" id="site-base" value="{{ page.url | slugify | default: 'home' }}" />
-		<input type="hidden" id="site-category" value="" />
 		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 		<script src="/js/main.js"></script>
 		<script>

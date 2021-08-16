@@ -1,38 +1,38 @@
-window.deviceAnimation = function(canvasId) {
-	var view = document.getElementById(canvasId);
+/**
+ * Homepage device animation with red bubble flying around
+ */
+var deviceAnimation = function(view) {
 	var width = view.offsetWidth;
 	var height = view.offsetHeight;
-	var renderer = PIXI.autoDetectRenderer(width, height);
-	var renderer = new PIXI.CanvasRenderer(width, height, {
+	var renderer = new PIXI.CanvasRenderer({
+		width: width,
+		height: height, 
 		view: view,
-		transparent: false,
-		autoResize: true,
-      	backgroundColor: 0xecedf1
+		backgroundColor: 0xecedf1,
 	});
 
+	var lights = [];
+	var stagew = width, stageh = height;
 	var stage = new PIXI.Container();
 	renderer.render(stage);
-	var stagew = width, stageh = height;
-
+  
 	var circle = new PIXI.Graphics();
 	circle.lineStyle(0);
 	circle.beginFill(0xe91e63, 1);
-	circle.drawCircle(stagew*0.5, stageh*0.5, 40);
+	circle.drawCircle(stagew * 0.5, stageh * 0.5, 40);
 	circle.endFill();
 	
-  	var circleTexture = circle.generateCanvasTexture();
-  
-	var lights = [];
+	var circleTexture = circle.generateCanvasTexture();
 	for (var i = 0; i < 30; i++) {
-		var light = new PIXI.Sprite(circleTexture);//circle.clone();
+		var light = new PIXI.Sprite(circleTexture);
 		lights.push(light);
-        light.anchor.set(0.5);
-     	var scale = (Math.random() * 0.5) - 0.5;
-		light.scale.x = scale;
-		light.scale.y = scale;
+		light.anchor.set(0.5);
+		light.scale.set((Math.random() * 0.5) - 0.5);
 		light.alpha = 0;
-		light.x = Math.random() * stagew;
-		light.y = Math.random() * stageh;
+		light.position.set(
+			Math.random() * stagew,
+			Math.random() * stageh
+		);
 		light.tx = (Math.random() * 2) - 1;
 		light.ty = (Math.random() * 2) - 1;
 		light.direction = Math.random() * Math.PI * 2;
@@ -45,17 +45,20 @@ window.deviceAnimation = function(canvasId) {
 	}
 
 	var padding = 100;
-	var bounds = new PIXI.Rectangle(-padding, -padding, renderer.width + padding * 2, renderer.height + padding * 2);
+	var bounds = new PIXI.Rectangle(
+		-padding,
+		-padding,
+		renderer.width + padding * 2,
+		renderer.height + padding * 2
+	);
 
-	function animate() {
-		requestAnimationFrame(animate);
-		
-      	var rect = renderer.view.getBoundingClientRect();
+	return function () {
+		var rect = renderer.view.getBoundingClientRect();
 		var height = (window.innerHeight || document.documentElement.clientHeight)
        
-        if(rect.bottom < 50 || rect.bottom > height) {
-          return;
-        }
+		if (rect.bottom < 50 || rect.bottom > height) {
+			return;
+		}
       	
 		for (var i = 0; i < lights.length; i++) {
 			var light = lights[i];
@@ -82,9 +85,17 @@ window.deviceAnimation = function(canvasId) {
 				light.md *= -1;
 			}
 		}
-
 		renderer.render(stage);
-	}
-
-	animate();
+	};
 }
+
+/**
+ * Create a single ticker to update all canvases
+ * more performant.
+ */
+var canvases = document.querySelectorAll('.device canvas');
+var ticker = new PIXI.Ticker();
+for (var i = 0; i < canvases.length; i++) {
+	ticker.add(deviceAnimation(canvases[i]));
+}
+ticker.start();

@@ -1,0 +1,131 @@
+.mobile-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    .bar {
+        display: block;
+        height: 50px;
+        background-color: $white;
+        background-image: url(/images/logo.svg);
+        background-position: 10px 12px;
+        background-repeat: no-repeat;
+        background-size: 84px 24px;
+        @include box-shadow(0 0 5px 0 rgba(0, 0, 0, .35));
+        border-bottom: 1px solid #c8c8ca;
+        @include transition(all .3s $custom-ease);
+        position: relative;
+        z-index: 2;
+        .hamburger {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            i {
+                width: 22px;
+                height: 2px;
+                background: $pink500;
+                @include transform-origin(50% 50%);
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -2px 0 0 -11px;
+                &#line1 {
+                    @include transform(translateY(-8px));
+                }
+                &#line3 {
+                    @include transform(translateY(8px));
+                }
+            }
+            rect {
+                fill: $pink500
+            }
+            path {
+                stroke: $pink500;
+                stroke-width: 4px;
+                stroke-linecap: round;
+                fill: transparent
+            }
+        }
+    }
+    &.home {
+        .bar {
+            background-color: transparent;
+            background-position: 10px -100px;
+            border-bottom: none;
+            @include box-shadow(none);
+            .hamburger i {
+                background: $white
+            }
+        }
+        &.open .bar,
+        &.shown .bar {
+            background-color: $white;
+            background-position: 10px 12px;
+            border-bottom: 1px solid #c8c8ca;
+            @include box-shadow(0 0 5px 0 rgba(0, 0, 0, .35));
+            .hamburger i {
+                background: $pink500
+            }
+        }
+    }
+    nav {
+        display: block;
+        font-size: 0;
+        display: none;
+        @include transform(translateY(-120%));
+        @include transition(transform .3s $custom-ease);
+        z-index: 1;
+        a {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: 0;
+            display: block;
+            padding: 0 10px;
+            width: 100%;
+            height: 48px;
+            line-height: 48px;
+            background: $blue50;
+            color: $gray700;
+            &:active, &:hover {
+                color: $pink700;
+                background: $blue50
+            }
+            &.current {
+                color: $pink500;
+                background: $blue100
+            }
+            
+            &.alt-nav-item {
+                // width: 50%;
+                // display: inline-block;
+                vertical-align: top;
+                padding-left: 40px;
+                background-size: 24px 24px;
+                background-position: 10px 12px;
+                background-repeat: no-repeat;
+                color: $pink500
+            }
+        }
+    }
+    .mobile-sub-nav {
+        border-top: 2px solid $blue200;
+        border-bottom: 2px solid $blue200;
+        font-size: 0;
+        a {
+            vertical-align: top;
+            font-size: 14px;
+            height: 40px;
+            line-height: 40px;
+        }
+    }
+    &.open nav {
+        @include transform(translateY(0));
+        @include transition(transform .3s $custom-ease);
+    }
+}

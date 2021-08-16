@@ -1,0 +1,60 @@
+.main-content .projects {
+    background: $blue800 url(/images/tile.png) 0 0 repeat;
+    background-attachment: fixed;
+    padding: 39px 0 28px;
+    text-align: center;
+    h2 {
+        color: $white;
+        margin: 0
+    }
+    
+    h5 {
+        color: $blue100;
+        max-width: 860px;
+        margin: 34px auto 35px
+    }
+    
+    .project-list {
+        display: block;
+        font-size: 0;
+        text-align: center;
+        max-width: 980px;
+        margin: 20px auto 0;
+        .project {
+            display: inline-block;
+            width: 100%;
+            max-width: 490px;
+            padding: 20px;
+            @include transform-origin(50% 50%);
+            @include transition(all 1 $custom-ease);
+            a {
+                display: block;
+                width: 100%;
+                position: relative;
+                @include box-shadow(10px 10px 0 0 $blue900);
+            }
+            .thumbnail {
+                display: block;
+                width: 100%;
+                padding-top: 57.77777778%;
+                background-size: cover;
+                background-position: center center;
+                background-color: $blue900
+            }
+            .description {
+                display: block;
+                background: $blue700;
+                padding: 20px;
+                text-align: left;
+                h5 {
+                    color: $white;
+                    margin: 0;
+                }
+                p {
+                    color: $blue100;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

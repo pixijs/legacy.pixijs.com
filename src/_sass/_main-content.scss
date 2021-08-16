@@ -1,0 +1,69 @@
+
+.main-content {
+    position: relative;
+    z-index: 2;
+    background: $white;
+    section {
+        overflow: hidden;
+    }
+    .brand-logos {
+        background: $blue50;
+        padding: 25px 0 20px;
+        .inner {
+            padding: 0
+        }
+        p {
+            color: $blue500;
+            margin: 0 0 13px;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .mask {
+            overflow: hidden;
+            font-size: 0;
+            white-space: nowrap;
+            width: 100%;
+            height: 66px;
+            max-width: 160px;
+            margin: 0 auto;
+            .logo {
+                width: 160px;
+                height: 66px;
+                display: inline-block;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: 160px 66px
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:$breakpoint-xsmall) {
+    .main-content .brand-logos .mask {
+        max-width: $breakpoint-xsmall;
+    }
+}
+
+@media only screen and (min-width:$breakpoint-small) {
+    .main-content .brand-logos .mask {
+        max-width: $breakpoint-small;
+    }
+}
+
+@media only screen and (min-width:$breakpoint-medium) {
+    .main-content .brand-logos .mask {
+        max-width: $breakpoint-medium;
+    }
+}
+
+@media only screen and (min-width:$breakpoint-large) {
+    .main-content .brand-logos .mask {
+        max-width: $breakpoint-large;
+    }
+}
+
+@media only screen and (min-width:$breakpoint-xlarge) {
+    .main-content .brand-logos .mask {
+        max-width: $breakpoint-xlarge;
+    }
+}

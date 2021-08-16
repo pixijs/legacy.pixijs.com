@@ -1,0 +1,148 @@
+.main-content .features {
+    background: $blue700 url(/images/tile.png) 0 0 repeat;
+    background-attachment: fixed;
+    padding: 39px 0 48px;
+    overflow: hidden;
+    .row {
+        display: block;
+        max-width: 100%;
+        max-width: 1500px;
+        margin: 0 auto;
+        &:after {
+            display: table;
+            content: "";
+            clear: both;
+        }
+        .col {
+            float: left;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            color: $white;
+            margin-bottom: 0;
+            .num {
+                display: block;
+                font-family: 'Roboto Mono';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 21px;
+                letter-spacing: -.01 em;
+                color: $blue300;
+            }
+            h3 {
+                margin: 0 0 33px;
+            }
+            h6 {
+                margin: 0;
+            }
+        }
+    }
+    .devices {
+        position: relative;
+        width: 98%;
+        max-width: 941px;
+        height: 353px;
+        margin: 0 auto;
+        display: none;
+        .device {
+            position: absolute;
+            @include transform(translateY(500px));
+            img {
+                width: 100%;
+                height: auto;
+                display: block
+            }
+            canvas {
+                position: absolute;
+                background: $blue50 url(/images/device-background.png) center center;
+                border: 1px solid $blue200
+            }
+            &.desktop {
+                z-index: 1;
+                left: 50%;
+                width: 386px;
+                top: 0;
+                margin-left: -193px;
+                canvas {
+                    left: 19px;
+                    top: 28px;
+                    width: 348px;
+                    height: 198px
+                }
+            }
+            
+            &.ipad {
+                z-index: 2;
+                left: 60.78639745%;
+                width: 155px;
+                top: 138px;
+                canvas {
+                    left: 17px;
+                    top: 16px;
+                    width: 124px;
+                    height: 164px
+                }
+            }
+            
+            &.iphone {
+                z-index: 3;
+                left: 75.34537726%;
+                width: 92px;
+                top: 177px;
+                canvas {
+                    left: 10px;
+                    top: 18px;
+                    width: 72px;
+                    height: 126px
+                }
+            }
+            
+            &.phone {
+                z-index: 4;
+                right: 0;
+                width: 170px;
+                bottom: 0;
+                canvas {
+                    left: 20px;
+                    top: 9px;
+                    width: 132px;
+                    height: 80px
+                }
+            }
+            
+            
+            &.laptop {
+                z-index: 2;
+                left: 6.16365569%;
+                width: 355px;
+                top: 127px;
+                canvas {
+                    left: 46px;
+                    top: 16px;
+                    width: 264px;
+                    height: 166px
+                }
+            }
+            
+            &.tablet {
+                z-index: 4;
+                left: 0;
+                width: 195px;
+                bottom: 0;
+                canvas {
+                    left: 17px;
+                    top: 15px;
+                    width: 160px;
+                    height: 95px
+                }
+            }
+        }
+    }
+    .button {
+        @include transform(translateY(500px));
+    }
+    
+    .button-center {
+        margin-top: 10px
+    }
+}

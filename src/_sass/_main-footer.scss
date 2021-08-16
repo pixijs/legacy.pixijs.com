@@ -1,0 +1,44 @@
+
+.main-footer {
+    background: $blue900;
+    padding: 70px 0 30px;
+    position: relative;
+    z-index: 2;
+    p {
+        margin: 0 0 20px 0;
+        color: $blue300
+    }
+    a {
+        color: $white;
+        text-decoration: none;
+        &:hover {
+            color: $pink500
+        }
+    }
+    h6 {
+        color: $white;
+        margin: 0 0 18px;
+        position: relative
+    }
+    .social-links {
+        font-size: 0;
+        margin-left: -5px;
+        margin-bottom: 22px;
+        a {
+            display: inline-block;
+            background-color: $blue300;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 24px;
+            text-align: center;
+            color: $blue900;
+            margin: 0 5px;
+            @include transition(background-color .3s $custom-ease);
+            &:hover {
+                background-color: $white;
+                @include transition(background-color .25s $custom-ease);
+            }
+        }
+    }
+}
