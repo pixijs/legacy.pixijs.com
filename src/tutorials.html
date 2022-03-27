@@ -68,7 +68,7 @@ books:
 						<div class="col-4 ani-sfb" data-delay="0.2" data-speed="0.5" data-animation="short-from-bottom">
 							<div class="books">
                                 {% for book in page.books %}
-								<a href="{{ book.url }}" target="_blank" class="book-{{ forloop.index }}">
+								<a href="{{ book.external_url }}" target="_blank" class="book-{{ forloop.index }}">
 									<h4>Book</h4>
 									<h6 class="mono">{{ book.title }}</h6>
 									<p class="mono author">_by {{ book.author }}</p>
