@@ -19,6 +19,7 @@ jobs:
 
       - uses: jeffreytse/jekyll-deploy-action@v0.4.0
         with:
-          token: ${{ secrets.WORKFLOW_TOKEN }}
+          provider: 'github'
+          token: ${{ secrets.GITHUB_TOKEN }}
           bundler_ver: '2.1.4'
           cname: 'pixijs.com'
